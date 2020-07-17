@@ -29,7 +29,22 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.black,
         title: Text("QR Scanner"),
       ),
-      body: Center(child: Text("Hey there !")),
+      body: Center(
+        child: Text(
+          "Hey there !",
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        icon: Icon(Icons.camera_alt),
+        label: Text("Scan"),
+        onPressed: (){},
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      
     );
   }
 }
