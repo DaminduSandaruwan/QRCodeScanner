@@ -33,12 +33,12 @@ class _HomePageState extends State<HomePage> {
   String result = "Hey there!";
   Future _scanQR() async{
     try{
-      String qrResult = await BarcodeScanner.scan().toString();
+      String qrResult = await BarcodeScanner.scan();
       setState(() {
         result=qrResult;
       });
     }on PlatformException catch(ex){
-      if(ex.code==BarcodeScanner.cameraAccessDenied){
+      if(ex.code==BarcodeScanner.CameraAccessDenied){
         setState(() {
           result="Camera Permission was Denied!";
         });
