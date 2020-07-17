@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:barcode_scan/barcode_scan.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -26,6 +28,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.black,
         title: Text("QR Scanner"),
       ),
@@ -43,7 +46,7 @@ class HomePage extends StatelessWidget {
         label: Text("Scan"),
         onPressed: (){},
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat ,
       
     );
   }
